@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d5b45">
+  <meta name="description" content="صدقة جارية على روح الحاج فتحي العيسوي — مصحف بالصفحات، تلاوة متصلة، أذكار، أدعية، أحاديث، مواقيت الصلاة والقبلة وورد وختمة.">
+  <meta property="og:title" content="صدقة جارية على روح الحاج فتحي العيسوي">
+  <meta property="og:description" content="موقع إسلامي عام ومجاني: القرآن بالصفحات، الأذكار، الأدعية، الأحاديث، الصلاة والقبلة والورد اليومي.">
+  <meta property="og:type" content="website">
+  <title>صدقة جارية على روح الحاج فتحي العيسوي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <button id="menuBtn" class="icon-btn" aria-label="القائمة">☰</button>
+  <div class="brand"><span class="brand-mark">۞</span><div><strong>صدقة جارية</strong><small>على روح الحاج فتحي العيسوي</small></div></div>
+  <div class="top-actions"><button id="globalSearchBtn" class="icon-btn" title="بحث">⌕</button><button id="themeBtn" class="icon-btn" title="الوضع الليلي">☾</button></div>
+</header>
+<aside id="sidebar" class="sidebar"><nav id="nav">
+  <button data-section="home" class="active">⌂ الرئيسية</button>
+  <button data-section="quran">☾ المصحف والقرآن</button>
+  <button data-section="khatma">◫ ختمتي ووردي</button>
+  <button data-section="adhkar">✦ الأذكار الكاملة</button>
+  <button data-section="duas">🤲 الأدعية</button>
+  <button data-section="hadith">❖ الأحاديث الصحيحة</button>
+  <button data-section="ruqyah">♢ الرقية الشرعية</button>
+  <button data-section="asma">✦ أسماء الله الحسنى</button>
+  <button data-section="dailyworks">✓ أعمال اليوم</button>
+  <button data-section="favorites">★ المفضلة</button>
+  <button data-section="tasbeeh">◉ السبحة</button>
+  <button data-section="prayer">⌚ الصلاة والقبلة</button>
+  <button data-section="benefits">✧ فوائد نافعة</button>
+  <button data-section="sadaqa">❤ عن الصدقة الجارية</button>
+</nav></aside>
+<div id="overlay" class="overlay"></div>
+
+<main class="content">
+<section id="home" class="page active">
+  <div class="hero hero-with-photo">
+    <div class="hero-copy"><p class="eyebrow">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم</p><h1>صدقة جارية على روح<br><span>الحاج فتحي العيسوي</span></h1><p class="hero-dua">اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، واجعل هذا العمل في ميزان حسناته، وانفع به المسلمين.</p><div class="hero-actions"><button class="primary" data-go="daily">ابدأ وردك اليومي</button><button class="ghost" id="continueReading">متابعة القراءة</button><button class="ghost" id="shareSite">شارك الموقع</button></div></div>
+    <figure class="father-photo"><img src="assets/fathy-alelesawy.jpeg" alt="الحاج فتحي العيسوي يقرأ القرآن"><figcaption>اللهم ارحم الحاج فتحي العيسوي واغفر له واجعل القرآن نورًا له</figcaption></figure>
+  </div>
+
+  <div class="stat-grid">
+    <article><b>604</b><span>صفحات المصحف</span></article><article><b>114</b><span>سورة كريمة</span></article><article><b id="homeAdhkarCount">—</b><span>ذكرًا ومأثورًا</span></article><article><b id="homeHadithCount">—</b><span>حديثًا مختارًا</span></article>
+  </div>
+
+  <div id="daily" class="daily-grid"><article class="card"><span class="tag">آية اليوم</span><p class="quran-text" id="dailyAyah"></p><small id="dailyAyahRef"></small></article><article class="card"><span class="tag">ذكر اليوم</span><p id="dailyDhikr"></p></article><article class="card"><span class="tag">حديث اليوم</span><p id="dailyHadith"></p><small id="dailyHadithRef"></small></article><article class="card"><span class="tag">دعاء اليوم</span><p id="dailyDua"></p></article></div>
+
+  <div class="section-title"><h2>مركز المسلم اليومي</h2><p>وصول سريع إلى أكثر ما يحتاجه المسلم خلال يومه، بدون تسجيل دخول.</p></div>
+  <div class="quick-grid expanded"><button data-open="quran"><b>📖 المصحف بالصفحات</b><span>صفحات المصحف + السورة كاملة + الأجزاء</span></button><button data-open="khatma"><b>◫ ختمتي</b><span>احفظ صفحتك وحدد وردك اليومي</span></button><button data-open="adhkar"><b>☀ أذكار الصباح والمساء</b><span>عدادات وتكرارات ومصادر</span></button><button data-open="duas"><b>🤲 الأدعية</b><span>للنفس والوالدين والمتوفى والفرج</span></button><button data-open="hadith"><b>❖ الأحاديث</b><span>مختارات صحيحة مع المصدر</span></button><button data-open="ruqyah"><b>♢ الرقية الشرعية</b><span>آيات وأدعية مأثورة</span></button><button data-open="asma"><b>✦ أسماء الله الحسنى</b><span>99 اسمًا للتعلم والتدبر</span></button><button data-open="dailyworks"><b>✓ أعمال اليوم</b><span>ورد عملي يومي محفوظ</span></button><button data-open="prayer"><b>⌚ مواقيت الصلاة</b><span>مدن مصر والقبلة والتاريخ</span></button><button data-open="tasbeeh"><b>◉ السبحة</b><span>عداد محفوظ على جهازك</span></button></div>
+
+  <div class="home-panels"><article class="card progress-card"><div class="item-head"><span class="tag">ختمتك</span><button data-open="khatma" class="mini-btn">إدارة الختمة</button></div><h3 id="homeKhatmaTitle">ابدأ ختمتك</h3><div class="progress"><span id="homeKhatmaBar"></span></div><small id="homeKhatmaText">يمكنك حفظ آخر صفحة ومتابعة وردك يوميًا.</small></article><article class="card"><span class="tag">الصلاة</span><h3 id="homePrayerTitle">مواقيت مصر</h3><p id="homePrayerText">افتح قسم الصلاة لاختيار مدينتك ومعرفة الصلاة القادمة.</p><button data-open="prayer" class="mini-btn">عرض المواقيت</button></article></div>
+</section>
+
+<section id="quran" class="page">
+  <div class="section-title"><h2>المصحف الشريف — صفحات وسور وأجزاء</h2><p>اختر طريقة القراءة التي تناسبك: صفحة من صفحات المصحف، سورة كاملة في شاشة واحدة، أو جزء كامل. ويمكنك التنقل السابق/التالي داخل نفس النوع.</p></div>
+  <div class="quran-dashboard">
+    <div class="quran-mode-tabs" role="tablist" aria-label="طريقة تصفح القرآن">
+      <button id="modePage" class="quran-mode-btn active" data-mode="page">📄 صفحات المصحف <small>1–604</small></button>
+      <button id="modeSurah" class="quran-mode-btn" data-mode="surah">📖 سورة كاملة <small>1–114</small></button>
+      <button id="modeJuz" class="quran-mode-btn" data-mode="juz">◫ جزء كامل <small>1–30</small></button>
+    </div>
+    <div class="quran-controls">
+      <div class="q-control page-control"><label>انتقال إلى صفحة</label><div class="inline"><input id="pageJump" type="number" min="1" max="604" value="1"><button id="goPage" class="primary">فتح الصفحة</button></div></div>
+      <div class="q-control"><label>اختيار سورة — تُعرض كاملة</label><select id="surahSelect"></select></div>
+      <div class="q-control"><label>اختيار جزء — يُعرض كاملًا</label><select id="juzSelect"></select></div>
+      <div class="q-control"><label>القارئ</label><select id="reciter"><option value="ar.alafasy">مشاري راشد العفاسي</option><option value="ar.husary">محمود خليل الحصري</option><option value="ar.minshawi">محمد صديق المنشاوي</option><option value="ar.hudhaify">علي عبد الرحمن الحذيفي</option><option value="ar.sudais">عبد الرحمن السديس</option><option value="ar.abdulbasit">عبد الباسط عبد الصمد</option><option value="ar.shuraim">سعود الشريم</option><option value="legacy.mustafa">مصطفى إسماعيل</option><option value="legacy.refat">محمد رفعت</option></select></div>
+    </div>
+    <div class="quran-search-box"><input id="quranSearch" class="search" placeholder="ابحث في القرآن بكلمة أو جزء من آية..."><button id="quranSearchBtn" class="ghost">بحث</button></div>
+    <div id="quranSearchResults" class="search-strip hidden"></div>
+  </div>
+
+  <div class="mushaf-shell">
+    <div class="reading-mode-status"><span id="readingModeBadge">وضع الصفحات</span><small id="readingModeHelp">التنقل الآن صفحة بصفحة</small></div>
+    <div class="mushaf-toolbar"><button id="prevPage">→ السابق</button><div class="mushaf-meta"><b id="mushafPageTitle">الصفحة 1</b><small id="mushafMeta">جارٍ التحميل...</small></div><button id="nextPage">التالي ←</button></div>
+    <div class="audio-toolbar"><button id="playPage" class="primary">▶ تشغيل المعروض</button><button id="stopPage" class="ghost">■ إيقاف</button><button id="playCurrentSurah" class="ghost">♫ تشغيل السورة صوتًا متصلًا</button><button id="savePage" class="ghost">☆ حفظ موضع القراءة</button><label id="autoNextWrap" class="toggle"><input id="autoNextPage" type="checkbox"><span>انتقال تلقائي للصفحة التالية</span></label></div>
+    <div class="mushaf-viewbar"><span>طريقة العرض:</span><button id="mushafClassic" class="view-btn active">صفحة مصحف</button><button id="mushafComfort" class="view-btn">قراءة مريحة</button><button id="fontDown" class="view-btn">أ−</button><button id="fontUp" class="view-btn">أ+</button></div>
+    <div id="pageAudioStatus" class="audio-status">في وضع الصفحة تُجهّز تلاوة آيات الصفحة لتقليل الفواصل. وفي وضع السورة تُشغّل السورة من ملف صوتي متصل.</div>
+    <div class="progress audio-progress"><span id="pageAudioProgress"></span></div>
+    <article id="mushafPage" class="mushaf-page"><div class="notice">جارٍ تحميل الصفحة الأولى...</div></article>
+    <div class="mushaf-footer"><button id="prevPageBottom">→ السابق</button><b id="pageNumberBottom">1</b><button id="nextPageBottom">التالي ←</button></div>
+  </div>
+  <audio id="surahPlayer" controls preload="none" class="surah-player"></audio>
+  <div class="source-note">مصدر النص والتلاوات: Al Quran Cloud / Islamic Network CDN. عرض الصفحات يعتمد رقم الصفحة المرفق مع النص العثماني، وعرض السورة/الجزء يعرض النص كاملًا في جلسة قراءة واحدة.</div>
+</section>
+
+<section id="khatma" class="page"><div class="section-title"><h2>ختمتي ووردي اليومي</h2><p>تابع قراءتك بالصفحات؛ التقدم محفوظ على هذا الجهاز فقط.</p></div><div class="khatma-grid"><article class="card khatma-main"><span class="tag">تقدم الختمة</span><div class="khatma-number"><b id="khatmaPercent">0%</b><span id="khatmaPages">0 من 604 صفحة</span></div><div class="progress large"><span id="khatmaBar"></span></div><div class="toolbar compact-tools"><input id="khatmaCurrentPage" type="number" min="1" max="604" placeholder="آخر صفحة وصلت إليها"><button id="saveKhatma" class="primary">حفظ التقدم</button></div><button id="openKhatmaPage" class="ghost full">افتح آخر صفحة الآن</button></article><article class="card"><span class="tag">الورد اليومي</span><h3>كم صفحة تريد يوميًا؟</h3><div class="toolbar compact-tools"><input id="dailyPages" type="number" min="1" max="100" value="10"><button id="saveDailyPages" class="ghost">حفظ</button></div><p id="khatmaEstimate"></p><div class="today-target"><b id="todayTarget">—</b><small>صفحات ورد اليوم المقترحة</small></div></article><article class="card"><span class="tag">آخر قراءة</span><h3 id="lastReadLabel">لا يوجد موضع محفوظ بعد</h3><p>كلما فتحت صفحة في المصحف يحفظ الموقع آخر صفحة تلقائيًا.</p><button id="resumeLastRead" class="primary">متابعة القراءة</button></article></div></section>
+
+<section id="adhkar" class="page"><div class="section-title"><h2>الأذكار الكاملة</h2><p>أذكار الصباح والمساء ومواقف اليوم، مع عدد التكرار وعداد مستقل لكل ذكر.</p></div><div class="filter-row"><input id="adhkarSearch" class="search" placeholder="ابحث داخل الأذكار..."><button id="resetAdhkarToday" class="ghost">تصفير عدادات القسم الحالي</button></div><div id="adhkarTabs" class="tabs scroll-tabs"></div><div id="adhkarList" class="stack"></div></section>
+
+<section id="duas" class="page"><div class="section-title"><h2>موسوعة الأدعية</h2><p>أدعية من القرآن والسنة ومأثورات صحيحة المعنى، مع أقسام للنفس والوالدين والمتوفى والفرج والرزق.</p></div><input id="duaSearch" class="search section-search" placeholder="ابحث في الأدعية..."><div id="duaTabs" class="tabs scroll-tabs"></div><div id="duaList" class="stack"></div></section>
+
+<section id="hadith" class="page"><div class="section-title"><h2>أحاديث صحيحة مختارة</h2><p>مختارات قصيرة مع مرجع الحديث. الهدف التذكير والانتفاع، وليس استبدال كتب السنة وشروحها.</p></div><div class="toolbar"><input id="hadithSearch" class="search" placeholder="ابحث في الأحاديث..."><select id="hadithCategory"><option value="all">كل الموضوعات</option></select></div><div id="hadithList" class="stack"></div></section>
+
+<section id="ruqyah" class="page"><div class="section-title"><h2>الرقية الشرعية</h2><p>آيات وأدعية مأثورة تُقرأ بنية الاستشفاء والافتقار إلى الله، مع الأخذ بالأسباب الطبية عند الحاجة.</p></div><div class="notice">الرقية دعاء وقراءة مشروعة، وليست بديلًا عن الطبيب أو العلاج عند وجود مرض أو حالة طارئة.</div><div id="ruqyahList" class="stack"></div></section>
+
+<section id="asma" class="page"><div class="section-title"><h2>أسماء الله الحسنى</h2><p>تعلّم الأسماء الحسنى وتدبر معانيها، مع بحث سريع وحفظ الاسم للمراجعة اليومية.</p></div><div class="toolbar"><input id="asmaSearch" class="search" placeholder="ابحث عن اسم من أسماء الله الحسنى..."><button id="randomAsma" class="ghost">اسم للتدبر اليوم</button></div><div id="asmaFeatured" class="asma-featured hidden"></div><div id="asmaGrid" class="asma-grid"></div></section>
+<section id="dailyworks" class="page"><div class="section-title"><h2>أعمال اليوم</h2><p>قائمة عملية صغيرة تساعدك على المحافظة على وردك اليومي. تُصفّر تلقائيًا مع بداية يوم جديد على جهازك.</p></div><div class="dailyworks-summary"><article><small>إنجاز اليوم</small><b id="dailyWorksPercent">0%</b><div class="progress"><span id="dailyWorksBar"></span></div></article><article><small>تم</small><b id="dailyWorksDone">0 / 0</b><button id="resetDailyWorks" class="ghost">إعادة اليوم</button></article></div><div id="dailyWorksList" class="dailyworks-list"></div></section>
+<section id="favorites" class="page"><div class="section-title"><h2>المفضلة</h2><p>كل ما تحفظه من آيات وأذكار وأدعية وأحاديث يظهر هنا على هذا الجهاز.</p></div><div id="favoriteList" class="stack"></div></section>
+
+<section id="tasbeeh" class="page"><div class="section-title"><h2>السبحة الإلكترونية</h2><p>العداد يُحفظ تلقائيًا على جهازك.</p></div><div class="tasbeeh-card"><select id="tasbeehPhrase"><option>سبحان الله</option><option>الحمد لله</option><option>الله أكبر</option><option>لا إله إلا الله</option><option>أستغفر الله</option><option>لا حول ولا قوة إلا بالله</option><option>اللهم صل وسلم على نبينا محمد</option></select><button id="tasbeehTap" class="tasbeeh-circle"><span id="tasbeehCount">0</span><small>اضغط للتسبيح</small></button><div class="tasbeeh-actions"><button id="minusTasbeeh">−1</button><button id="resetTasbeeh">تصفير</button></div></div></section>
+
+<section id="prayer" class="page"><div class="section-title"><h2>مواقيت الصلاة في مصر والقبلة</h2><p>اختر محافظتك/مدينتك المصرية. الحساب بطريقة الهيئة المصرية العامة للمساحة عبر AlAdhan.</p></div><div class="toolbar prayer-toolbar"><select id="egyptCity"><option value="Cairo">القاهرة</option><option value="Giza">الجيزة</option><option value="Alexandria">الإسكندرية</option><option value="Port Said">بورسعيد</option><option value="Suez">السويس</option><option value="Ismailia">الإسماعيلية</option><option value="Mansoura">المنصورة</option><option value="Tanta">طنطا</option><option value="Zagazig">الزقازيق</option><option value="Damanhur">دمنهور</option><option value="Damietta">دمياط</option><option value="Fayoum">الفيوم</option><option value="Beni Suef">بني سويف</option><option value="Minya">المنيا</option><option value="Asyut">أسيوط</option><option value="Sohag">سوهاج</option><option value="Qena">قنا</option><option value="Luxor">الأقصر</option><option value="Aswan">أسوان</option><option value="Hurghada">الغردقة</option><option value="Sharm El Sheikh">شرم الشيخ</option><option value="Arish">العريش</option></select><button id="cityPrayerBtn" class="primary">عرض المواقيت</button><button id="locateBtn" class="ghost">استخدم موقعي داخل مصر</button></div><div id="prayerStatus" class="notice">القاهرة محددة افتراضيًا. اختر مدينتك ثم اضغط عرض المواقيت.</div><div class="prayer-summary"><article><small>التاريخ الهجري</small><b id="hijriDate">—</b></article><article><small>الصلاة القادمة</small><b id="nextPrayerName">—</b><span id="nextPrayerCountdown">—</span></article></div><div id="prayerGrid" class="prayer-grid"></div><div id="qiblaBox" class="qibla-box hidden"><div id="qiblaArrow" class="qibla-arrow">↑</div><b>اتجاه القبلة</b><span id="qiblaDeg"></span></div></section>
+
+<section id="benefits" class="page"><div class="section-title"><h2>فوائد نافعة خلال اليوم</h2><p>تذكيرات عملية قصيرة تساعد على دوام الطاعة وحسن الخلق.</p></div><div id="benefitList" class="stack"></div></section>
+
+<section id="sadaqa" class="page"><div class="memorial card-large"><figure class="memorial-photo"><img src="assets/fathy-alelesawy.jpeg" alt="الحاج فتحي العيسوي"></figure><span class="brand-mark big">۞</span><h2>في ذكرى الحاج فتحي العيسوي</h2><p class="quran-text">رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ</p><p>هذا الموقع أُنشئ بنية الصدقة الجارية، وهو مفتوح لكل الناس بلا تسجيل أو مقابل. نسأل الله أن ينفع به، وأن يجعل كل قراءة وذكر ودعاء وعلم نافع فيه في ميزان حسناته.</p><div class="special-duas"><h3>أدعية لوالدي</h3><p>اللهم اغفر لأبي فتحي العيسوي وارحمه رحمةً واسعة، ونوّر قبره، وآنس وحشته، واجعل قبره روضةً من رياض الجنة.</p><p>اللهم اجزه عن الإحسان إحسانًا، وعن الإساءة عفوًا وغفرانًا، وأكرم نزله ووسّع مدخله، واجمعنا به في جنات النعيم.</p><p>اللهم ارفع درجته في المهديين، واخلفه في عقبه في الغابرين، واغفر لنا وله يا رب العالمين.</p></div><button id="duaForFather" class="primary">دعوت له الآن 🤲</button><small id="duaThanks"></small><button id="shareMemorial" class="ghost">شارك الصدقة الجارية</button></div></section>
+</main>
+<footer><b>صدقة جارية على روح الحاج فتحي العيسوي</b><span>نسأل الله القبول والرحمة له ولجميع موتى المسلمين.</span><small>القرآن والتلاوات: Al Quran Cloud / Islamic Network. مواقيت الصلاة والقبلة: AlAdhan. المحتوى الحديثي والأذكار مختارات بمراجعها.</small></footer>
+<div id="searchModal" class="modal hidden"><div class="modal-card"><button id="closeSearch" class="modal-close">×</button><h3>بحث في الموقع</h3><input id="globalSearch" class="search" placeholder="اكتب ذكرًا أو دعاءً أو حديثًا..."><div id="searchResults" class="stack compact"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
