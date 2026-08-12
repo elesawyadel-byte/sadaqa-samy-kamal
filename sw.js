@@ -1,5 +1,5 @@
-const CACHE='sadaqa-v67-mustafa-refat';
-const CORE=['./','./index.html','./style.css','./data.js','./app.js','./manifest.webmanifest','./assets/fathy-alelesawy.jpeg'];
+const CACHE='sadaqa-samy-v1';
+const CORE=['./','./index.html','./style.css','./data.js','./app.js','./manifest.webmanifest','./assets/samy-kamal.jpeg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
