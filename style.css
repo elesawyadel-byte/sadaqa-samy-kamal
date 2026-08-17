@@ -322,3 +322,20 @@ body.dark .v20-daily-journey,body.dark .v20-achievements,body.dark .v20-smart-se
   body:not(.dark) .sidebar-bottom-actions button{color:#18332a!important;border-color:#cfd8d1!important;background:#fffdf8!important}
   body:not(.dark) .sidebar-bottom-actions .sidebar-dua-btn{background:linear-gradient(135deg,#e4b84e,#f2d47d)!important;color:#183c30!important}
 }
+\n\n/* ===== Samy v1.3 mobile hardening ===== */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg{max-width:100%}
+@media(max-width:780px){
+  .site-masthead{width:auto!important;max-width:none!important;overflow:hidden!important}
+  .masthead-art{position:absolute!important;object-fit:contain!important}
+  .masthead-art-mosque{right:5px!important;left:auto!important;bottom:18px!important;width:68px!important;height:74px!important;max-width:68px!important}
+  .masthead-art-quran{left:2px!important;right:auto!important;bottom:14px!important;width:80px!important;height:72px!important;max-width:80px!important}
+  .site-masthead .masthead-copy{padding:20px 55px!important;max-width:100%!important;box-sizing:border-box!important}
+  .site-masthead .masthead-copy h1{font-size:43px!important;line-height:1.08!important;overflow-wrap:anywhere!important}
+  .site-masthead .masthead-copy small{font-size:16px!important}
+  .site-masthead .masthead-copy p{font-size:11px!important}
+}
+@media(max-width:520px){
+  .site-masthead .masthead-copy h1{font-size:34px!important}
+  .site-masthead .masthead-copy{padding-inline:48px!important}
+}

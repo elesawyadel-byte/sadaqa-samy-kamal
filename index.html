@@ -11,7 +11,7 @@
   <title>صدقة جارية على روح سامي كمال عبده مصطفي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=1.3-mobile-fix">
 </head>
 <body>
 <header class="topbar">
@@ -249,5 +249,9 @@
 <div id="tafsirModal" class="modal hidden"><div class="modal-card tafsir-modal-card"><button id="closeTafsir" class="modal-close">×</button><div class="tafsir-head"><span id="tafsirRef" class="tag">تفسير الآية</span><span id="tafsirSurahType" class="surah-type-badge">—</span></div><h3 id="tafsirAyahText" class="quran-text tafsir-ayah-text"></h3><div class="tafsir-section"><h4>التفسير الميسر</h4><div id="tafsirText" class="tafsir-text">جارٍ تحميل التفسير...</div></div><div id="revelationContextBox" class="tafsir-section"><h4>سبب أو سياق النزول</h4><div id="revelationContext" class="tafsir-text">—</div></div><div class="tafsir-footnote">مكية/مدنية هنا وصف للسورة. أما موضع أو سبب نزول آية بعينها فلا يُذكر إلا عند وجود نقل معروف؛ وإلا يوضح الموقع أنه غير مثبت ضمن بياناته.</div></div></div>
 <div id="celebration" class="celebration" aria-hidden="true"><div class="celebration-message" id="celebrationMessage">أحسنت ✨</div></div>
 <div id="toast" class="toast"></div>
-<script src="data.js"></script><script src="app.js"></script>
+<script>
+// Clean any old PWA/service-worker cache from previous versions once.
+(async()=>{try{if(!localStorage.getItem("samyWebCacheV13")){if("serviceWorker" in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.map(r=>r.unregister()));}if("caches" in window){const keys=await caches.keys();await Promise.all(keys.map(k=>caches.delete(k)));}localStorage.setItem("samyWebCacheV13","1");}}catch(e){}})();
+</script>
+<script src="data.js?v=1.3-mobile-fix"></script><script src="app.js?v=1.3-mobile-fix"></script>
 </body></html>
