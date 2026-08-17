@@ -11,37 +11,101 @@
   <title>صدقة جارية على روح سامي كمال عبده مصطفي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="topbar">
   <button id="menuBtn" class="icon-btn" aria-label="القائمة">☰</button>
   <div class="brand"><span class="brand-mark">۞</span><div><strong>صدقة جارية</strong><small>على روح سامي كمال عبده مصطفي</small></div></div>
-  <div class="top-actions"><button id="globalSearchBtn" class="icon-btn" title="بحث">⌕</button><button id="themeBtn" class="icon-btn" title="الوضع الليلي">☾</button></div>
+  <div class="top-actions" aria-label="مظهر الموقع">
+    <button id="globalSearchBtn" class="icon-btn" title="بحث">⌕</button>
+  </div>
 </header>
-<aside id="sidebar" class="sidebar"><nav id="nav">
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-memorial">
+    <div class="sidebar-mosque">☾<span>⌂</span></div>
+    <strong>صدقة جارية</strong>
+    <small>على روح الحاج<br><b>سامي كمال عبده مصطفي</b></small>
+  </div>
+  <nav id="nav">
   <button data-section="home" class="active">⌂ الرئيسية</button>
   <button data-section="quran">☾ المصحف والقرآن</button>
   <button data-section="khatma">◫ ختمتي ووردي</button>
   <button data-section="adhkar">✦ الأذكار الكاملة</button>
   <button data-section="duas">🤲 الأدعية</button>
   <button data-section="hadith">❖ الأحاديث الصحيحة</button>
+  <button data-section="promised">🌿 المبشرون بالجنة</button>
+  <button data-section="prophets">📜 الأنبياء في القرآن</button>
+  <button data-section="islamicencyclopedia">📚 الموسوعة الإسلامية</button>
+  <button data-section="wisdom">✨ حكم ومواعظ</button>
   <button data-section="ruqyah">♢ الرقية الشرعية</button>
   <button data-section="asma">✦ أسماء الله الحسنى</button>
   <button data-section="dailyworks">✓ أعمال اليوم</button>
+  <button data-section="quiz">❓ سؤال اليوم</button>
+  <button data-section="v21quiz">🧠 اختبر معلوماتك</button>
+  <button data-section="duafinder">🤲 ماذا أدعو؟</button>
+  <button data-section="dailygoals">🎯 أهدافي اليومية</button>
   <button data-section="favorites">★ المفضلة</button>
   <button data-section="tasbeeh">◉ السبحة</button>
   <button data-section="prayer">⌚ الصلاة والقبلة</button>
   <button data-section="benefits">✧ فوائد نافعة</button>
   <button data-section="sadaqa">❤ عن الصدقة الجارية</button>
-</nav></aside>
+</nav>
+  <div class="sidebar-bottom-actions">
+<button id="sidebarShareBtn" type="button">↗ مشاركة الموقع</button>
+    <button data-open="sadaqa" class="sidebar-dua-btn" type="button">♡ الدعاء للمرحوم</button>
+  </div>
+</aside>
 <div id="overlay" class="overlay"></div>
+
+<div class="theme-switcher" aria-label="تبديل مظهر الموقع">
+  <button id="themeLightBtn" class="theme-switch-btn" type="button" title="الوضع النهاري" aria-label="الوضع النهاري"><span>☀</span><b>نهاري</b></button>
+  <button id="themeDarkBtn" class="theme-switch-btn" type="button" title="الوضع الليلي" aria-label="الوضع الليلي"><span>☾</span><b>ليلي</b></button>
+</div>
 
 <main class="content">
 <section id="home" class="page active">
-  <div class="hero hero-with-photo">
-    <div class="hero-copy"><p class="eyebrow">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم</p><h1>صدقة جارية على روح<br><span>سامي كمال عبده مصطفي</span></h1><p class="hero-dua">اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، واجعل هذا العمل في ميزان حسناته، وانفع به المسلمين.</p><div class="hero-actions"><button class="primary" data-go="daily">ابدأ وردك اليومي</button><button class="ghost" id="continueReading">متابعة القراءة</button><button class="ghost" id="shareSite">شارك الموقع</button></div></div>
+  <div class="site-masthead">
+    <img class="masthead-art masthead-art-mosque" src="assets/header-mosque.svg" alt="مسجد" aria-hidden="true">
+    <div class="masthead-copy">
+      <small>صدقة جارية على روح</small>
+      <h1>سامي كمال عبده مصطفي</h1>
+      <p>موقع إسلامي شامل — قرآن كريم، أذكار، أدعية، أحاديث صحيحة، ورد يومي ومواقيت الصلاة</p>
+    </div>
+    <img class="masthead-art masthead-art-quran" src="assets/header-quran.svg" alt="المصحف الشريف" aria-hidden="true">
+  </div>
+
+  <div class="home-nav-row">
+    <button id="homeSearchBtn" class="home-search-launch">⌕ <span>ابحث في الموقع...</span></button>
+    <div class="home-nav-links"><button data-open="home">⌂ الرئيسية</button><button data-open="sadaqa">♡ من نحن</button><button id="homeShareBtn">✉ شارك الموقع</button></div>
+  </div>
+<article class="home-quiz-live" aria-labelledby="homeQuizQuestion">
+    <div class="home-quiz-live-head">
+      <div><span id="homeQuizCategory" class="tag">سؤال اليوم</span><span class="home-quiz-badge">تحدٍ ديني يومي</span></div>
+      <span id="homeQuizDayState" class="quiz-state">سؤال اليوم</span>
+    </div>
+    <h2 id="homeQuizQuestion">جارٍ تجهيز سؤال اليوم...</h2>
+    <p id="homeQuizHint">سؤال جديد كل يوم من القرآن والحديث والسيرة والعبادات والمعلومات الإسلامية.</p>
+    <div id="homeQuizOptions" class="quiz-options home-quiz-options"></div>
+    <div id="homeQuizResult" class="quiz-result hidden"></div>
+    <div class="home-quiz-live-foot"><small>اختر إجابة واحدة، وستظهر لك الإجابة الصحيحة مع شرح مختصر.</small><button data-open="quiz" class="ghost">فتح صفحة سؤال اليوم</button></div>
+  </article>
+
+  <div class="home-info-strip">
+    <article><span class="info-icon">☀</span><div><small>مواقيت الصلاة</small><b id="homeNextPrayerName">جارٍ التحميل...</b></div></article>
+    <article><span class="info-icon">◷</span><div><small>الصلاة القادمة</small><b id="homeNextPrayerTime">—</b></div></article>
+    <article><span class="info-icon">☪</span><div><small>التاريخ الهجري</small><b id="homeHijriDate">—</b></div></article>
+    <article><span class="info-icon">◆</span><div><small>اتجاه القبلة</small><b id="homeQiblaDeg">—</b></div></article>
+  </div>
+
+  <div class="home-activity-strip">
+    <article><small>زيارات اليوم</small><b id="todayVisits">1</b><span>على هذا الجهاز</span></article>
+    <article><small>المهام المنجزة</small><b id="todayTasksDone">0</b><span>من أعمال اليوم</span></article>
+    <article><small>سؤال اليوم</small><b id="todayQuizStatus">لم يُجب</b><span>تحدٍ ديني يومي</span></article>
+  </div>
+
+  <div class="hero hero-with-photo reference-hero">
+    <div class="hero-copy"><div class="hero-flourish">✧ ♡ ✧</div><h1>اللهم ارحم <span>سامي كمال عبده مصطفي</span><br>واغفر له، واجعل هذا الموقع صدقة جارية له ولأهله ولمن أحبهم</h1><p class="hero-dua">اللهم اجعل كل آية تُقرأ، وكل ذكر ودعاء وعلم نافع في ميزان حسناته، وانفع بهذا العمل المسلمين.</p><div class="hero-actions"><button class="primary" id="heroDuaBtn" data-open="sadaqa">الدعاء للمرحوم</button><button class="ghost" id="continueReading">متابعة القراءة</button><button class="ghost" id="shareSite">شارك الموقع</button></div></div>
     <figure class="father-photo"><img src="assets/samy-kamal.jpeg" alt="سامي كمال عبده مصطفي يقرأ القرآن"><figcaption>اللهم ارحم سامي كمال عبده مصطفي واغفر له واجعل القرآن نورًا له</figcaption></figure>
   </div>
 
@@ -51,8 +115,30 @@
 
   <div id="daily" class="daily-grid"><article class="card"><span class="tag">آية اليوم</span><p class="quran-text" id="dailyAyah"></p><small id="dailyAyahRef"></small></article><article class="card"><span class="tag">ذكر اليوم</span><p id="dailyDhikr"></p></article><article class="card"><span class="tag">حديث اليوم</span><p id="dailyHadith"></p><small id="dailyHadithRef"></small></article><article class="card"><span class="tag">دعاء اليوم</span><p id="dailyDua"></p></article></div>
 
+  <article id="dailyKnowledgeBox" class="daily-knowledge-card"><div><span class="tag" id="dailyKnowledgeTitle">هل تعلم؟</span><h3 id="dailyKnowledgeText">معلومة إسلامية مختصرة تتغير يوميًا.</h3><small id="dailyKnowledgeSource"></small></div><button data-open="islamicencyclopedia" class="ghost">افتح الموسوعة الإسلامية</button></article>
+
+  <!-- V20: رحلة المسلم اليومية — إضافات فقط -->
+  <section class="v20-daily-journey" aria-labelledby="v20JourneyTitle">
+    <div class="v20-head"><div><span class="tag">رحلتك اليوم</span><h2 id="v20JourneyTitle">وردك اليوم <b id="v20JourneyScore">0/5</b></h2><p>خمس خطوات خفيفة تجمع القراءة والذكر والعلم والعمل الصالح.</p></div><div class="v20-streak">🔥 <b id="v20Streak">0</b><small>أيام متتالية</small></div></div>
+    <div id="v20JourneySteps" class="v20-steps"></div>
+    <div class="progress v20-progress"><span id="v20JourneyBar"></span></div>
+    <p id="v20JourneyMessage" class="v20-message"></p>
+  </section>
+
+  <div class="v20-feature-grid">
+    <article class="v20-feature-card"><span class="tag">🎯 تحدي اليوم</span><h3 id="v20ChallengeTitle">عمل صالح بسيط</h3><p id="v20ChallengeText"></p><button id="v20ChallengeDone" class="primary">✓ أتممت التحدي</button></article>
+    <article class="v20-feature-card" id="v20GoodDeedCard"><span class="tag">❤️ عمل اليوم الصالح</span><h3 id="v20GoodDeedTitle">عمل صالح</h3><p id="v20GoodDeedText"></p><button id="v20GoodDeedDone" class="primary">✓ أتممت العمل</button></article>
+    <article class="v20-feature-card"><span class="tag">👤 شخصية اليوم</span><h3 id="v20PersonName"></h3><p id="v20PersonText"></p><small id="v20PersonLesson"></small></article>
+    <article class="v20-feature-card v20-reflection"><span class="tag">📖 آية وتدبر</span><p id="v20ReflectAyah" class="quran-text"></p><b id="v20ReflectRef"></b><p id="v20ReflectLesson"></p></article>
+  </div>
+
+  <section class="v20-achievements"><div class="v20-head"><div><span class="tag">🏆 إنجازاتك</span><h2>خطوات صغيرة.. وأثر مستمر</h2></div><button id="v20ResetToday" class="ghost">بدء يوم جديد</button></div><div id="v20Badges" class="v20-badges"></div></section>
+
+  <section class="v20-smart-search"><div><span class="tag">🔍 البحث الإسلامي الشامل</span><h2>ابحث في محتوى الموقع</h2><p>الأذكار، الأدعية، الأحاديث، الموسوعة، الحكم والمواعظ.</p></div><div class="v20-search-row"><input id="v20SearchInput" class="search" placeholder="مثال: الصبر، الوالدين، الصلاة، موسى..."><button id="v20SearchBtn" class="primary">بحث</button></div><div id="v20SearchResults" class="v20-search-results hidden"></div></section>
+
+<section class="v21-home-tools"><div class="v21-home-head"><div><span class="tag">V21 • أدواتك اليومية</span><h2>استمر من حيث توقفت وتعلّم كل يوم</h2></div><button id="v21ElderToggle" class="ghost">🔠 وضع كبار السن</button></div><div class="v21-home-grid"><article class="v21-home-card"><span>🔖</span><div><b>أكمل من حيث توقفت</b><p id="v21ResumeText">آخر موضع قراءة محفوظ</p></div><button id="v21ResumeBtn" class="primary">متابعة</button></article><article class="v21-home-card"><span>🧠</span><div><b>اختبر معلوماتك</b><p>5 أو 10 أسئلة مع النتيجة والتفسير.</p></div><button data-open="v21quiz" class="primary">ابدأ</button></article><article class="v21-home-card"><span>🤲</span><div><b>ماذا أدعو؟</b><p>دعاء مناسب للحالة التي تمر بها.</p></div><button data-open="duafinder" class="primary">اختر</button></article><article class="v21-home-card"><span>🎯</span><div><b>أهدافي اليومية</b><p id="v21GoalsSummary">تابع ذكرك وورد القرآن.</p></div><button data-open="dailygoals" class="primary">متابعة</button></article></div></section>
   <div class="section-title"><h2>مركز المسلم اليومي</h2><p>وصول سريع إلى أكثر ما يحتاجه المسلم خلال يومه، بدون تسجيل دخول.</p></div>
-  <div class="quick-grid expanded"><button data-open="quran"><b>📖 المصحف بالصفحات</b><span>صفحات المصحف + السورة كاملة + الأجزاء</span></button><button data-open="khatma"><b>◫ ختمتي</b><span>احفظ صفحتك وحدد وردك اليومي</span></button><button data-open="adhkar"><b>☀ أذكار الصباح والمساء</b><span>عدادات وتكرارات ومصادر</span></button><button data-open="duas"><b>🤲 الأدعية</b><span>للنفس والالمتوفىن والمتوفى والفرج</span></button><button data-open="hadith"><b>❖ الأحاديث</b><span>مختارات صحيحة مع المصدر</span></button><button data-open="ruqyah"><b>♢ الرقية الشرعية</b><span>آيات وأدعية مأثورة</span></button><button data-open="asma"><b>✦ أسماء الله الحسنى</b><span>99 اسمًا للتعلم والتدبر</span></button><button data-open="dailyworks"><b>✓ أعمال اليوم</b><span>ورد عملي يومي محفوظ</span></button><button data-open="prayer"><b>⌚ مواقيت الصلاة</b><span>مدن مصر والقبلة والتاريخ</span></button><button data-open="tasbeeh"><b>◉ السبحة</b><span>عداد محفوظ على جهازك</span></button></div>
+  <div class="quick-grid expanded"><button data-open="quran"><b>📖 المصحف بالصفحات</b><span>صفحات المصحف + السورة كاملة + الأجزاء</span></button><button data-open="khatma"><b>◫ ختمتي</b><span>احفظ صفحتك وحدد وردك اليومي</span></button><button data-open="adhkar"><b>☀ أذكار الصباح والمساء</b><span>عدادات وتكرارات ومصادر</span></button><button data-open="duas"><b>🤲 الأدعية</b><span>للنفس والوالدين والمتوفى والفرج</span></button><button data-open="hadith"><b>❖ الأحاديث</b><span>مختارات صحيحة مع المصدر</span></button><button data-open="ruqyah"><b>♢ الرقية الشرعية</b><span>آيات وأدعية مأثورة</span></button><button data-open="asma"><b>✦ أسماء الله الحسنى</b><span>99 اسمًا للتعلم والتدبر</span></button><button data-open="dailyworks"><b>✓ أعمال اليوم</b><span>ورد عملي يومي محفوظ</span></button><button data-open="prayer"><b>⌚ مواقيت الصلاة</b><span>مدن مصر والقبلة والتاريخ</span></button><button data-open="tasbeeh"><b>◉ السبحة</b><span>عداد محفوظ على جهازك</span></button></div>
 
   <div class="home-panels"><article class="card progress-card"><div class="item-head"><span class="tag">ختمتك</span><button data-open="khatma" class="mini-btn">إدارة الختمة</button></div><h3 id="homeKhatmaTitle">ابدأ ختمتك</h3><div class="progress"><span id="homeKhatmaBar"></span></div><small id="homeKhatmaText">يمكنك حفظ آخر صفحة ومتابعة وردك يوميًا.</small></article><article class="card"><span class="tag">الصلاة</span><h3 id="homePrayerTitle">مواقيت مصر</h3><p id="homePrayerText">افتح قسم الصلاة لاختيار مدينتك ومعرفة الصلاة القادمة.</p><button data-open="prayer" class="mini-btn">عرض المواقيت</button></article></div>
 </section>
@@ -77,6 +163,7 @@
 
   <div class="mushaf-shell">
     <div class="reading-mode-status"><span id="readingModeBadge">وضع الصفحات</span><small id="readingModeHelp">التنقل الآن صفحة بصفحة</small></div>
+    <div id="surahKnowledge" class="surah-knowledge"><span>اضغط على أي آية لعرض التفسير ومعلومات السورة.</span></div>
     <div class="mushaf-toolbar"><button id="prevPage">→ السابق</button><div class="mushaf-meta"><b id="mushafPageTitle">الصفحة 1</b><small id="mushafMeta">جارٍ التحميل...</small></div><button id="nextPage">التالي ←</button></div>
     <div class="audio-toolbar"><button id="playPage" class="primary">▶ تشغيل المعروض</button><button id="stopPage" class="ghost">■ إيقاف</button><button id="playCurrentSurah" class="ghost">♫ تشغيل السورة صوتًا متصلًا</button><button id="savePage" class="ghost">☆ حفظ موضع القراءة</button><label id="autoNextWrap" class="toggle"><input id="autoNextPage" type="checkbox"><span>انتقال تلقائي للصفحة التالية</span></label></div>
     <div class="mushaf-viewbar"><span>طريقة العرض:</span><button id="mushafClassic" class="view-btn active">صفحة مصحف</button><button id="mushafComfort" class="view-btn">قراءة مريحة</button><button id="fontDown" class="view-btn">أ−</button><button id="fontUp" class="view-btn">أ+</button></div>
@@ -93,14 +180,60 @@
 
 <section id="adhkar" class="page"><div class="section-title"><h2>الأذكار الكاملة</h2><p>أذكار الصباح والمساء ومواقف اليوم، مع عدد التكرار وعداد مستقل لكل ذكر.</p></div><div class="filter-row"><input id="adhkarSearch" class="search" placeholder="ابحث داخل الأذكار..."><button id="resetAdhkarToday" class="ghost">تصفير عدادات القسم الحالي</button></div><div id="adhkarTabs" class="tabs scroll-tabs"></div><div id="adhkarList" class="stack"></div></section>
 
-<section id="duas" class="page"><div class="section-title"><h2>موسوعة الأدعية</h2><p>أدعية من القرآن والسنة ومأثورات صحيحة المعنى، مع أقسام للنفس والالمتوفىن والمتوفى والفرج والرزق.</p></div><input id="duaSearch" class="search section-search" placeholder="ابحث في الأدعية..."><div id="duaTabs" class="tabs scroll-tabs"></div><div id="duaList" class="stack"></div></section>
+<section id="duas" class="page"><div class="section-title"><h2>موسوعة الأدعية</h2><p>أدعية من القرآن والسنة ومأثورات صحيحة المعنى، مع أقسام للنفس والوالدين والمتوفى والفرج والرزق.</p></div><input id="duaSearch" class="search section-search" placeholder="ابحث في الأدعية..."><div id="duaTabs" class="tabs scroll-tabs"></div><div id="duaList" class="stack"></div></section>
 
 <section id="hadith" class="page"><div class="section-title"><h2>أحاديث صحيحة مختارة</h2><p>مختارات قصيرة مع مرجع الحديث. الهدف التذكير والانتفاع، وليس استبدال كتب السنة وشروحها.</p></div><div class="toolbar"><input id="hadithSearch" class="search" placeholder="ابحث في الأحاديث..."><select id="hadithCategory"><option value="all">كل الموضوعات</option></select></div><div id="hadithList" class="stack"></div></section>
+
+<section id="promised" class="page">
+  <div class="section-title"><h2>المبشرون بالجنة</h2><p>تعريف مختصر بالعشرة الذين جمعهم حديث البشارة بالجنة، ومعهم نساء وردت لهن بشارات صحيحة خاصة. المحتوى للتعريف المختصر مع ذكر المرجع.</p></div>
+  <div class="knowledge-note">تنبيه: تعبير «العشرة المبشرون بالجنة» اسم مشهور لعشرة من الصحابة، ولا يعني أن البشارة بالجنة اقتصرت عليهم؛ فقد ثبتت بشارات لأشخاص آخرين أيضًا.</div>
+  <div class="knowledge-block"><h3>العشرة المبشرون بالجنة</h3><div id="promisedMenGrid" class="bio-grid"></div></div>
+  <div class="knowledge-block"><h3>نساء وردت لهن بشارات صحيحة</h3><div id="promisedWomenGrid" class="bio-grid women"></div></div>
+</section>
+
+<section id="prophets" class="page">
+  <div class="section-title"><h2>الأنبياء المذكورون في القرآن</h2><p>بطاقات تعريفية بالأنبياء الذين وردت أسماؤهم في القرآن، والقوم أو الجهة التي وردت دعوتهم إليها عندما يذكر القرآن ذلك بوضوح.</p></div>
+  <div class="filter-row"><input id="prophetSearch" class="search" placeholder="ابحث باسم نبي أو قوم..."><button id="clearProphetSearch" class="ghost">مسح البحث</button></div>
+  <div class="knowledge-note">عند عدم وجود نص قرآني صريح يحدد قومًا باسم مستقل، نكتب ذلك بوضوح ولا ننسب للنبي قومًا اعتمادًا على روايات غير ثابتة.</div>
+  <div id="prophetsGrid" class="bio-grid prophets"></div>
+</section>
+
+<section id="islamicencyclopedia" class="page">
+  <div class="section-title"><h2>الموسوعة الإسلامية العامة</h2><p>موسوعة واسعة ومبسطة عن القرآن وأسماء سوره وقصصه، وأمهات المؤمنين وأسرة النبي ﷺ والصحابة، والسيرة والهجرة والمساجد والخلفاء والفتوحات الإسلامية.</p></div>
+  <div class="knowledge-note">تنبيه علمي: بعض الإحصاءات مثل عدد حروف القرآن وعدد سجدات التلاوة تختلف باختلاف طريقة العد والرواية؛ لذلك نوضح المشهور ولا نقدّم المختلف فيه كرقم قطعي.</div>
+  <div id="encyclopediaTabs" class="tabs scroll-tabs"></div>
+  <div id="encyclopediaGrid" class="bio-grid encyclopedia-grid"></div>
+</section>
+
+<section id="wisdom" class="page">
+  <div class="section-title"><h2>حكم ومواعظ إيمانية</h2><p>آيات وأحاديث صحيحة، ودروس مستفادة من سير الأنبياء والصحابة ووصايا لقمان، وحكم تربوية عملية للحياة اليومية.</p></div>
+  <div class="knowledge-note">الآيات والأحاديث تُنسب إلى مصادرها، أما العبارات التربوية فتوصف بأنها «حكمة مستفادة» ولا تُنسب إلى نبي أو صحابي بلا مصدر ثابت.</div>
+  <div id="wisdomTabs" class="tabs scroll-tabs"></div>
+  <div id="wisdomGrid" class="stack wisdom-grid"></div>
+</section>
 
 <section id="ruqyah" class="page"><div class="section-title"><h2>الرقية الشرعية</h2><p>آيات وأدعية مأثورة تُقرأ بنية الاستشفاء والافتقار إلى الله، مع الأخذ بالأسباب الطبية عند الحاجة.</p></div><div class="notice">الرقية دعاء وقراءة مشروعة، وليست بديلًا عن الطبيب أو العلاج عند وجود مرض أو حالة طارئة.</div><div id="ruqyahList" class="stack"></div></section>
 
 <section id="asma" class="page"><div class="section-title"><h2>أسماء الله الحسنى</h2><p>تعلّم الأسماء الحسنى وتدبر معانيها، مع بحث سريع وحفظ الاسم للمراجعة اليومية.</p></div><div class="toolbar"><input id="asmaSearch" class="search" placeholder="ابحث عن اسم من أسماء الله الحسنى..."><button id="randomAsma" class="ghost">اسم للتدبر اليوم</button></div><div id="asmaFeatured" class="asma-featured hidden"></div><div id="asmaGrid" class="asma-grid"></div></section>
 <section id="dailyworks" class="page"><div class="section-title"><h2>أعمال اليوم</h2><p>قائمة عملية صغيرة تساعدك على المحافظة على وردك اليومي. تُصفّر تلقائيًا مع بداية يوم جديد على جهازك.</p></div><div class="dailyworks-summary"><article><small>إنجاز اليوم</small><b id="dailyWorksPercent">0%</b><div class="progress"><span id="dailyWorksBar"></span></div></article><article><small>تم</small><b id="dailyWorksDone">0 / 0</b><button id="resetDailyWorks" class="ghost">إعادة اليوم</button></article></div><div id="dailyWorksList" class="dailyworks-list"></div></section>
+
+
+<section id="v21quiz" class="page"><div class="section-title"><h2>🧠 اختبر معلوماتك</h2><p>مسابقة تعليمية من القرآن والسيرة والأنبياء والحديث والمعلومات الإسلامية، مع تصحيح وشرح فوري.</p></div><article class="card v21-quiz-panel"><div class="v21-quiz-top"><span id="v21QuizCat" class="tag">مسابقة إسلامية</span><b id="v21QuizProgress">1 / 5</b></div><h3 id="v21QuizQ">ابدأ المسابقة</h3><div id="v21QuizOptions" class="quiz-options"></div><div id="v21QuizFeedback" class="quiz-result hidden"></div><div class="v21-quiz-actions"><button id="v21QuizStart5" class="primary">ابدأ 5 أسئلة</button><button id="v21QuizStart10" class="ghost">ابدأ 10 أسئلة</button><button id="v21QuizNext" class="primary hidden">السؤال التالي</button></div><div id="v21QuizFinal" class="v21-final hidden"></div></article></section>
+
+<section id="duafinder" class="page"><div class="section-title"><h2>🤲 ماذا أدعو؟</h2><p>اختر حالتك لتصل بسرعة إلى دعاء مأثور مناسب، مع بيان المصدر حيث يتوفر.</p></div><div id="v21DuaTopics" class="v21-topic-grid"></div><div id="v21DuaResults" class="v21-dua-results"></div></section>
+
+<section id="dailygoals" class="page"><div class="section-title"><h2>🎯 أهدافي اليومية</h2><p>حدد أهدافًا بسيطة لذكرك وقراءتك، وتابع تقدمك على هذا الجهاز.</p></div><div class="v21-goals-grid"><article class="card"><span class="tag">استغفار</span><h3><b id="goalIstValue">0</b> / <span id="goalIstTarget">100</span></h3><div class="progress"><span id="goalIstBar"></span></div><div class="v21-goal-actions"><button data-goal="ist" data-add="1">+1</button><button data-goal="ist" data-add="10">+10</button><button data-goal-target="ist" class="ghost">تعديل الهدف</button></div></article><article class="card"><span class="tag">الصلاة على النبي ﷺ</span><h3><b id="goalSalValue">0</b> / <span id="goalSalTarget">100</span></h3><div class="progress"><span id="goalSalBar"></span></div><div class="v21-goal-actions"><button data-goal="sal" data-add="1">+1</button><button data-goal="sal" data-add="10">+10</button><button data-goal-target="sal" class="ghost">تعديل الهدف</button></div></article><article class="card"><span class="tag">صفحات القرآن</span><h3><b id="goalQuranValue">0</b> / <span id="goalQuranTarget">5</span></h3><div class="progress"><span id="goalQuranBar"></span></div><div class="v21-goal-actions"><button data-goal="quran" data-add="1">+ صفحة</button><button data-goal-target="quran" class="ghost">تعديل الهدف</button></div></article></div><button id="v21ResetGoals" class="ghost">تصفير تقدم اليوم</button></section>
+
+<section id="quiz" class="page">
+  <div class="section-title"><h2>سؤال اليوم الديني</h2><p>سؤال واحد جديد كل يوم في القرآن والحديث والسيرة والعبادات والمعلومات الإسلامية العامة. النتيجة محفوظة على هذا الجهاز لليوم الحالي.</p></div>
+  <article class="quiz-card">
+    <div class="quiz-head"><span id="quizCategory" class="tag">معلومات إسلامية</span><span id="quizDayState" class="quiz-state">سؤال اليوم</span></div>
+    <h3 id="quizQuestion">جارٍ تجهيز السؤال...</h3>
+    <div id="quizOptions" class="quiz-options"></div>
+    <div id="quizResult" class="quiz-result hidden"></div>
+    <div class="quiz-footer"><small>الهدف التعلم والتذكير، وتظهر الإجابة الصحيحة مع شرح مختصر بعد الاختيار.</small><button id="shareQuiz" class="ghost">شارك سؤال اليوم</button></div>
+  </article>
+</section>
 <section id="favorites" class="page"><div class="section-title"><h2>المفضلة</h2><p>كل ما تحفظه من آيات وأذكار وأدعية وأحاديث يظهر هنا على هذا الجهاز.</p></div><div id="favoriteList" class="stack"></div></section>
 
 <section id="tasbeeh" class="page"><div class="section-title"><h2>السبحة الإلكترونية</h2><p>العداد يُحفظ تلقائيًا على جهازك.</p></div><div class="tasbeeh-card"><select id="tasbeehPhrase"><option>سبحان الله</option><option>الحمد لله</option><option>الله أكبر</option><option>لا إله إلا الله</option><option>أستغفر الله</option><option>لا حول ولا قوة إلا بالله</option><option>اللهم صل وسلم على نبينا محمد</option></select><button id="tasbeehTap" class="tasbeeh-circle"><span id="tasbeehCount">0</span><small>اضغط للتسبيح</small></button><div class="tasbeeh-actions"><button id="minusTasbeeh">−1</button><button id="resetTasbeeh">تصفير</button></div></div></section>
@@ -109,10 +242,12 @@
 
 <section id="benefits" class="page"><div class="section-title"><h2>فوائد نافعة خلال اليوم</h2><p>تذكيرات عملية قصيرة تساعد على دوام الطاعة وحسن الخلق.</p></div><div id="benefitList" class="stack"></div></section>
 
-<section id="sadaqa" class="page"><div class="memorial card-large"><figure class="memorial-photo"><img src="assets/samy-kamal.jpeg" alt="سامي كمال عبده مصطفي"></figure><span class="brand-mark big">۞</span><h2>في ذكرى سامي كمال عبده مصطفي</h2><p class="quran-text">رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ</p><p>هذا الموقع أُنشئ بنية الصدقة الجارية، وهو مفتوح لكل الناس بلا تسجيل أو مقابل. نسأل الله أن ينفع به، وأن يجعل كل قراءة وذكر ودعاء وعلم نافع فيه في ميزان حسناته.</p><div class="special-duas"><h3>أدعية لالمتوفى</h3><p>اللهم اغفر لسامي كمال عبده مصطفي وارحمه رحمةً واسعة، ونوّر قبره، وآنس وحشته، واجعل قبره روضةً من رياض الجنة.</p><p>اللهم اجزه عن الإحسان إحسانًا، وعن الإساءة عفوًا وغفرانًا، وأكرم نزله ووسّع مدخله، واجمعنا به في جنات النعيم.</p><p>اللهم ارفع درجته في المهديين، واخلفه في عقبه في الغابرين، واغفر لنا وله يا رب العالمين.</p></div><button id="duaForFather" class="primary">دعوت له الآن 🤲</button><small id="duaThanks"></small><button id="shareMemorial" class="ghost">شارك الصدقة الجارية</button></div></section>
+<section id="sadaqa" class="page"><div class="memorial card-large"><figure class="memorial-photo"><img src="assets/samy-kamal.jpeg" alt="سامي كمال عبده مصطفي"></figure><span class="brand-mark big">۞</span><h2>في ذكرى سامي كمال عبده مصطفي</h2><p class="quran-text">رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ</p><p>هذا الموقع أُنشئ بنية الصدقة الجارية، وهو مفتوح لكل الناس بلا تسجيل أو مقابل. نسأل الله أن ينفع به، وأن يجعل كل قراءة وذكر ودعاء وعلم نافع فيه في ميزان حسناته.</p><div class="special-duas"><h3>أدعية للمرحوم</h3><p>اللهم اغفر لسامي كمال عبده مصطفي وارحمه رحمةً واسعة، ونوّر قبره، وآنس وحشته، واجعل قبره روضةً من رياض الجنة.</p><p>اللهم اجزه عن الإحسان إحسانًا، وعن الإساءة عفوًا وغفرانًا، وأكرم نزله ووسّع مدخله، واجمعنا به في جنات النعيم.</p><p>اللهم ارفع درجته في المهديين، واخلفه في عقبه في الغابرين، واغفر لنا وله يا رب العالمين.</p></div><button id="duaForFather" class="primary">دعوت له الآن 🤲</button><small id="duaThanks"></small><button id="shareMemorial" class="ghost">شارك الصدقة الجارية</button></div></section>
 </main>
-<footer><b>صدقة جارية على روح سامي كمال عبده مصطفي</b><span>نسأل الله القبول والرحمة له ولجميع موتى المسلمين.</span><small>القرآن والتلاوات: Al Quran Cloud / Islamic Network. مواقيت الصلاة والقبلة: AlAdhan. المحتوى الحديثي والأذكار مختارات بمراجعها.</small></footer>
+<footer><b>صدقة جارية على روح سامي كمال عبده مصطفي</b><span>نسأل الله القبول والرحمة له ولجميع موتى المسلمين.</span><small>القرآن والتلاوات: Al Quran Cloud / Islamic Network. مواقيت الصلاة والقبلة: AlAdhan / Islamic Network. المحتوى الحديثي والأذكار مختارات بمراجعها.</small></footer>
 <div id="searchModal" class="modal hidden"><div class="modal-card"><button id="closeSearch" class="modal-close">×</button><h3>بحث في الموقع</h3><input id="globalSearch" class="search" placeholder="اكتب ذكرًا أو دعاءً أو حديثًا..."><div id="searchResults" class="stack compact"></div></div></div>
+<div id="tafsirModal" class="modal hidden"><div class="modal-card tafsir-modal-card"><button id="closeTafsir" class="modal-close">×</button><div class="tafsir-head"><span id="tafsirRef" class="tag">تفسير الآية</span><span id="tafsirSurahType" class="surah-type-badge">—</span></div><h3 id="tafsirAyahText" class="quran-text tafsir-ayah-text"></h3><div class="tafsir-section"><h4>التفسير الميسر</h4><div id="tafsirText" class="tafsir-text">جارٍ تحميل التفسير...</div></div><div id="revelationContextBox" class="tafsir-section"><h4>سبب أو سياق النزول</h4><div id="revelationContext" class="tafsir-text">—</div></div><div class="tafsir-footnote">مكية/مدنية هنا وصف للسورة. أما موضع أو سبب نزول آية بعينها فلا يُذكر إلا عند وجود نقل معروف؛ وإلا يوضح الموقع أنه غير مثبت ضمن بياناته.</div></div></div>
+<div id="celebration" class="celebration" aria-hidden="true"><div class="celebration-message" id="celebrationMessage">أحسنت ✨</div></div>
 <div id="toast" class="toast"></div>
 <script src="data.js"></script><script src="app.js"></script>
 </body></html>
